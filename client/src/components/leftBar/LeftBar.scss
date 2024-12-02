@@ -1,0 +1,98 @@
+@import "../../App.scss";
+
+.leftBar {
+  flex: 2;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none; /* Hides the scrollbar in Firefox */
+
+  @include tablet{
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  .container {
+    padding: 20px;
+
+    hr {
+      margin: 20px 0px;
+      border: none;
+      height: 0.5px;
+      background-color: lightgray;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+
+      span {
+        font-size: 12px;
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        padding: 5px;
+
+        &:hover {
+          background-color: rgba(82, 113, 255, 0.1); /* lightblue background */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+          cursor: pointer;
+        }
+
+        @include tablet {
+          padding: 0;
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        span {
+          font-size: 14px;
+        }
+      }
+
+      .item {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        padding: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(82, 113, 255, 0.1); /* lightblue background */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+          cursor: pointer;
+        }
+
+        @include tablet {
+          padding: 0;
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+          object-fit: cover;
+        }
+
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

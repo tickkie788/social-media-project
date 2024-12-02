@@ -1,0 +1,179 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body .theme-dark {
+  background-color: #333;
+}
+
+body .theme-light {
+  background-color: whitesmoke;
+}
+
+.theme-light {
+  .leftBar {
+    background-color: white;
+  }
+
+  .rightBar {
+    background-color: whitesmoke;
+    .item {
+      background-color: white;
+    }
+  }
+}
+
+.theme-dark {
+  .navbar {
+    background-color: #222;
+    color: white;
+
+    span {
+      color: white !important;
+    }
+    input {
+      background-color: #222;
+    }
+    input::placeholder,
+    input[type="text"] {
+      color: lightgray;
+    }
+  }
+
+  .leftBar {
+    background-color: #222;
+    color: white;
+    span {
+      color: white !important;
+    }
+  }
+
+  .rightBar {
+    background-color: #333;
+    color: white;
+
+    .item {
+      background-color: #222;
+    }
+
+    span {
+      color: lightgray !important;
+    }
+
+    .userInfo {
+      span {
+        color: white !important;
+      }
+    }
+
+    p {
+      color: rgb(144, 143, 143) !important;
+    }
+  }
+
+  .post {
+    background-color: #222;
+    color: white !important;
+
+    .date {
+      color: lightgray !important;
+    }
+  }
+
+  .posts {
+    p {
+      color: white;
+    }
+  }
+
+  .share {
+    background-color: #222;
+    color: white !important;
+
+    span {
+      color: white !important;
+    }
+
+    input::placeholder {
+      color: lightgray !important;
+    }
+
+    input[type="text"] {
+      color: white !important;
+    }
+  }
+
+  .comments {
+    input::placeholder {
+      color: white;
+    }
+
+    input[type="text"] {
+      color: white;
+    }
+  }
+
+  .userInfo {
+    background-color: #222 !important;
+    color: white !important;
+
+    a,
+    span,
+    .item {
+      color: white !important;
+    }
+  }
+
+  .update-story-modal {
+    background-color: #333;
+    color: white;
+  }
+
+  .update-profile-modal {
+    background-color: #333 !important;
+    color: white !important;
+
+    h2 {
+      color: white !important;
+    }
+
+    .form-text label {
+      color: white !important;
+    }
+
+    .form-text input {
+      background-color: lightgray;
+    }
+  }
+
+  .friends {
+    background-color: #333 !important;
+    color: white !important;
+
+    .container {
+      background-color: #222 !important;
+    }
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 481px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+.outlet {
+  flex: 6;
+}

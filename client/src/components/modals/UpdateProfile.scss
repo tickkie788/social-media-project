@@ -1,0 +1,152 @@
+@import "../../App.scss";
+
+.update-profile-overlay {
+  position: fixed; /* Fixed to stay in place even when scrolling */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Adds a slight blur to the background */
+
+  .update-profile-modal {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+
+    @include mobile {
+      width: 45vh;
+    }
+
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+      h2 {
+        margin: 0;
+        font-size: 18px;
+        color: #333;
+      }
+
+      button {
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        color: #666;
+        cursor: pointer;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #ff4d4d;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .form-img {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        label {
+          font-size: 14px;
+          font-weight: bold;
+          color: #5271ff;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: #3454d1;
+          }
+
+          svg {
+            font-size: 18px;
+          }
+        }
+
+        img {
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+          border-radius: 5px;
+          border: 2px solid #ddd;
+        }
+
+        input {
+          display: none;
+        }
+      }
+
+      .form-text {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        label {
+          font-size: 14px;
+          font-weight: bold;
+          color: #333;
+        }
+
+        input {
+          box-sizing: border-box;
+          width: 100%;
+          height: 40px;
+          padding: 10px;
+          font-size: 14px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          transition: border-color 0.2s ease;
+
+          &:focus {
+            border-color: #5271ff;
+            outline: none;
+          }
+        }
+      }
+
+      button {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #5271ff;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition:
+          background-color 0.2s ease,
+          transform 0.1s ease;
+
+        &:hover {
+          background-color: #3454d1;
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
+      }
+    }
+  }
+}

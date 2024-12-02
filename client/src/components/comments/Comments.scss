@@ -1,0 +1,99 @@
+@import "../../App.scss";
+
+.comments {
+  .create-comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    margin: 20px 0;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    form {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+
+      input {
+        flex: 1;
+        box-sizing: border-box;
+        padding: 10px;
+        border: 1px solid lightgray;
+        background-color: transparent;
+      }
+      input:focus {
+        outline: none;
+      }
+
+      button {
+        padding: 10px;
+        background-color: #5271ff;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .comment {
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+
+    @include mobile {
+      column-gap: 10px;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      align-self: first baseline;
+    }
+
+    .details {
+      flex: 5;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+
+      span {
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+
+        @include mobile {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .date {
+      align-self: center;
+      font-size: 12px;
+      color: rgb(114, 114, 114);
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}

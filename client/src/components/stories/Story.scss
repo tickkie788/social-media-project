@@ -1,0 +1,125 @@
+@import "../../App.scss";
+
+.story-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px); /* Adds a slight blur to the background */
+}
+
+.story-modal {
+  width: 45vw; /* Make the modal more responsive */
+  max-width: 600px;
+  height: 80vh;
+  background-color: #2c2c2c;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include tablet {
+    width: 80vw;
+    height: 80vh;
+  }
+
+  @include mobile {
+    width: 90vw;
+    height: 60vh;
+  }
+
+  .creator-info {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .creator {
+      color: white;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .date {
+      color: lightgray;
+      font-size: 13px;
+    }
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2); /* Slight zoom effect for interaction */
+      color: #f0544f;
+    }
+  }
+
+  .story-img {
+    width: 100%;
+    max-height: 65vh;
+    object-fit: cover;
+
+    @include tablet {
+      max-height: 80%;
+    }
+
+    @include mobile {
+      width: 90vw;
+      height: 40vh;
+      object-fit: contain;
+    }
+  }
+
+  .more-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .delete-story-btn {
+    position: absolute;
+    bottom: 45px;
+    right: 15px;
+    padding: 8px;
+    background-color: #222;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .delete-story-btn:hover {
+    background-color: #f0544f;
+  }
+}

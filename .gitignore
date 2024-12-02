@@ -1,0 +1,28 @@
+# Node modules
+/api/node_modules/
+/client/node_modules/
+
+# Logs
+/api/logs/
+/client/logs/
+
+# Build output
+/client/build/
+
+# Environment files
+/api/.env
+/client/.env
+
+# Dependency locks
+/api/package-lock.json
+/client/package-lock.json
+
+# IDE files
+*.vscode/
+*.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db

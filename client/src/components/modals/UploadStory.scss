@@ -1,0 +1,96 @@
+@import "../../App.scss";
+
+.update-story-overlay {
+  position: fixed; /* Fixed to stay in place even when scrolling */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Adds a slight blur to the background */
+
+  .update-story-modal {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+
+    @include mobile {
+      width: 40vh;
+    }
+
+    h2 {
+      margin: 0;
+
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+
+    label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .upload {
+        font-size: 300px;
+        cursor: pointer;
+
+        @include mobile {
+          font-size: 100px;
+        }
+      }
+
+      input {
+        display: none;
+      }
+
+      img {
+        width: 500px;
+        height: 500px;
+        object-fit: contain;
+
+        @include mobile {
+          width: 300px;
+          height: 300px;
+        }
+      }
+    }
+
+    .btn-group {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+
+      button {
+        flex: 1;
+        padding: 10px 0px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:first-child {
+          background-color: #5271ff;
+        }
+
+        &:last-child {
+          background-color: #f0544f;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+@import "../../App.scss";
+
+.navbar {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 20px;
+  border-bottom: 1px solid lightgray;
+  background-color: white;
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  @include mobile {
+    justify-content: center;
+    column-gap: 10vw;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    @include tablet {
+      column-gap: 15px;
+    }
+
+    @include mobile {
+      column-gap: 10vw;
+    }
+
+    span {
+      font-size: 20px;
+      font-weight: bold;
+      color: darkblue;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    .theme-btn {
+      cursor: pointer;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+      padding: 5px;
+
+      @include mobile {
+        display: none;
+      }
+
+      input {
+        width: 500px;
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+
+        @include tablet {
+          width: 200px;
+        }
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    .person-icon {
+      display: none; /* Hidden by default */
+    }
+
+    @include tablet {
+      column-gap: 15px;
+
+      .person-icon {
+        display: inline-block; /* Show in tablet view */
+      }
+    }
+
+    @include mobile {
+      column-gap: 10vw;
+
+      .person-icon {
+        display: inline-block; /* Show in tablet view */
+      }
+
+      .email-icon,
+      .notification-icon,
+      .username {
+        display: none;
+      }
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      font-weight: 500;
+
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .username {
+        font-size: 14px;
+      }
+    }
+  }
+}
