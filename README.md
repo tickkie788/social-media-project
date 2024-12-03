@@ -60,7 +60,10 @@ Before you begin, ensure you have the following installed:
 
 ### Getting Started
 
-1. **Setup Backend:**
+1. **Database:**
+- Run the SQL querys in the /api/database folder to initialize your PostgreSQL database.
+
+2. **Setup Backend:**
 - Install dependencies:
    ```bash
    cd api
@@ -77,7 +80,7 @@ Before you begin, ensure you have the following installed:
   ```bash
   npm start
 
-2. **Setup Frontend:**
+3. **Setup Frontend:**
    ```bash
    cd api
    npm install
@@ -88,13 +91,10 @@ Before you begin, ensure you have the following installed:
    ```bash
    npm start
 
-3. **Database:**
-- Run the SQL querys in the /api/database folder to initialize your PostgreSQL database.
-
 4. **Access the App:**
 - Open your browser and navigate to http://localhost:3000.
 
-Folder Structure
+### Folder Structure
    ```bash
    /api
     /controllers  - Backend logic and API endpoints
