@@ -10,6 +10,7 @@ A full-stack social media web application where users can create accounts, follo
 - Like and unlike posts functionality.
 - Friend Suggestions and Adding Friends.
 - Profile updates and customization.
+- **Responsive Design**: Optimized for mobile, tablet, and desktop devices.
 
 ## Tech Stack
 
