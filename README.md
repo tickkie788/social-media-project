@@ -106,4 +106,4 @@ Before you begin, ensure you have the following installed:
    /client
     /public       - Static assets
     /src          - React components and logic
-    .env         - Environment variables (ignored by Git)
+    .env          - Environment variables (ignored by Git)
