@@ -12,7 +12,7 @@ A full-stack social media web application where users can create accounts, follo
 - Profile updates and customization.
 - **Responsive Design**: Optimized for mobile, tablet, and desktop devices.
 
-## Tech Stack
+## Tech Stack (PERN)
 
 ### Frontend
 - React.js
