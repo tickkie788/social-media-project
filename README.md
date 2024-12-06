@@ -83,7 +83,7 @@ Before you begin, ensure you have the following installed:
 
 3. **Setup Frontend:**
    ```bash
-   cd api
+   cd client
    npm install
 - Create a .env file in the client folder with the following content
    ```bash
