@@ -41,7 +41,7 @@
       padding: 50px;
       background:
         linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
-        url("https://images.pexels.com/photos/1267696/pexels-photo-1267696.jpeg") center;
+        url("/assets/login_background.png") center;
       background-size: cover;
 
       @include mobile {
