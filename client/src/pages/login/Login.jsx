@@ -39,7 +39,7 @@ export default function Login() {
     <div className="login">
       <div className="card">
         <div className="left">
-          <h1>Hello World.</h1>
+          <h1>Social Media</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolorum
             repudiandae nulla veniam enim pariatur, quam expedita est, nobis
