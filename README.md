@@ -69,6 +69,7 @@ Before you begin, ensure you have the following installed:
    ```bash
    cd api
    npm install
+   npm install -g nodemon
 - Create a .env file in the api folder with the following content:
    ```bash
    CLIENT_URL=http://localhost:3000
