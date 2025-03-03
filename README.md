@@ -56,7 +56,7 @@ A full-stack social media web application where users can create accounts, follo
 
 ### Prerequisites
 Before you begin, ensure you have the following installed:
-- Node.js (v16 or later)
+- [Node.js](https://nodejs.org/en/download)
 - [PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 
 ### Getting Started
